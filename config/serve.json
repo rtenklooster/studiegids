@@ -1,0 +1,6 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "initialPage": "https://alfacollege.sharepoint.com/sites/AC_TEST_Richard12-10-2022/_layouts/workbench.aspx"
+}

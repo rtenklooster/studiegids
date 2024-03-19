@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "Studiegids Webpart",
+    "id": "9cdfd203-1c0d-47fa-8a88-35e980bc7844",
+    "version": "1.0.0.3",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "Richard ten Klooster",
+      "websiteUrl": "https://www.linkedin.com/in/rtenklooster/",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.4"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Deze webpart verwijst naar de juiste studiegids locatie."
+      },
+      "longDescription": {
+        "default": "Deze webpart haalt uit het sharepoint profiel van de gebruiker de opleidingsinformatie op en verwijst naar de juiste studiegids locatie."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "studiegids Feature",
+        "description": "The feature that activates elements of the studiegids solution.",
+        "id": "339a4ef6-0b76-46e2-8c98-139a3a23e9a9",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/studiegids.sppkg"
+  }
+}
