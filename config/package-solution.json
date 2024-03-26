@@ -3,7 +3,7 @@
   "solution": {
     "name": "Studiegids Webpart",
     "id": "9cdfd203-1c0d-47fa-8a88-35e980bc7844",
-    "version": "1.0.0.3",
+    "version": "1.0.2.3",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

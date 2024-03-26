@@ -87,30 +87,34 @@ export const MyCards: React.FunctionComponent<ITabListProps> = ({
         // We hebben twee smaakjes. Opleidingen mét en opleidingen zonder uitstroomprofielen.
         cardFooter = (
           <CardFooter>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            {study.refOLWA.length === 0 ? (
-              <Button
-                appearance="primary"
-                onClick={() => window.open(`https://publicaties.alfa-college.formuleer.eu/opleidingswijzer/${study.studieprogrammacode}/${study.cohort.replace('/','-')}`, "_blank")}
-              >
-                Klik hier om jouw Opleidingswijzer te bekijken
-              </Button>
-            ) : (
-              study.refOLWA.map(item => {
-                const [code, description] = item.split('=');
-                return (
-                  <Button
-                    key={code} // Zorg voor een unieke key voor elk item
-                    appearance="primary"
-                    onClick={() => window.open(`https://publicaties.alfa-college.formuleer.eu/opleidingswijzer/${code}/${study.cohort.replace('/','-')}`, "_blank")}
-                  >
-                    {description}
-                  </Button>
-                );
-              })
-            )}
-            </div>
-          </CardFooter>
+  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+    {study.refOLWA.length === 0 ? (
+      <Button
+        appearance="primary"
+        onClick={() => window.open(`https://publicaties.alfa-college.formuleer.eu/opleidingswijzer/${study.studieprogrammacode}/${study.cohort.replace('/','-')}`, "_blank")}
+      >
+        Klik hier om jouw Opleidingswijzer te bekijken
+      </Button>
+    ) : (
+      <>
+        <div><b>Voor jouw opleiding(en) zijn de onderstaande Opleidingswijzers beschikbaar, klik op een knop om de Opleidingswijzer te bekijken.</b></div>
+        {study.refOLWA.map((item, index) => {
+          const [code, description] = item.split('=');
+          return (
+            <Button
+              key={code}
+              style={{ flex: '1 0 48%', maxWidth: '48%' }} // Dit zorgt ervoor dat elke knop maximaal 48% van de containerbreedte inneemt
+              appearance="primary"
+              onClick={() => window.open(`https://publicaties.alfa-college.formuleer.eu/opleidingswijzer/${code}/${study.cohort.replace('/','-')}`, "_blank")}
+            >
+              {description}
+            </Button>
+          );
+        })}
+      </>
+    )}
+  </div>
+</CardFooter>
         );
       }else{
         cardFooter = (

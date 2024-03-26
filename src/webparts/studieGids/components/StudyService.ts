@@ -48,9 +48,9 @@ export interface IStudy {
     }
     private splitRefOLW(str: string): string[] {
       // Controleer of de string een komma bevat
-      if (str.indexOf("＆") !== -1 ) {
+      if (str.indexOf("|") !== -1 ) {
         // Zo ja, splits de string op komma's en verwijder eventuele spaties
-        return str.split("＆").map(s => s.trim());
+        return str.split("|").map(s => s.trim());
       } else {
         // Zo nee, geef lege array terug
         return [];
